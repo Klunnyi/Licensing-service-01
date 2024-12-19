@@ -1,14 +1,14 @@
 package org.apply.methods.licensingservice.service;
 
-import java.util.Locale;
-import java.util.Random;
-
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.apply.methods.licensingservice.model.License;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 
+import java.util.Locale;
+import java.util.Random;
 
 @Service
 public class LicenseService {
@@ -33,12 +33,7 @@ public class LicenseService {
         String responseMessage = null;
         if (license != null) {
             license.setOrganizationId(organizationId);
-            responseMessage = String.format(messages.getMessage(
-                            "license.create.message", null, locale),
-                    license.toString());;
-            //String.format(
-            //messages.getMessage("license.create.message", null, locale),
-            // license);
+            responseMessage = String.format(messages.getMessage("license.create.message", null, locale), license);
         }
         return responseMessage;
     }

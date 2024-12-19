@@ -1,9 +1,6 @@
 package org.apply.methods.licensingservice.model;
 
 
-//import org.springframework.hateoas.RepresentationModel;
-//extends RepresentationModel<License>
-
 public class License  {
 
     private int id;
